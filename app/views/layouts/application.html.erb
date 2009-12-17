@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>jsHub.org Demo Store</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+ 
+   <!-- Combo generated jsHub modules -->
+  <%= javascript_include_tag 'jshub/yui/jshub.js' %>
+  
+  <!-- jsHub Tag Inspector -->
+  <%= render :partial => 'shared/jshubinspector'%>    		
+
+
+  <!-- jsHub provide a copy of jQuery to be extended -->
+  <%= stylesheet_link_tag '../javascripts/jquery.fancybox/jquery.fancybox.css' %>
+  <%= javascript_include_tag 'jquery.validate.pack.js', 
+        'jquery/jquery.color.js', 'jquery.fancybox/jquery.easing.1.3.js', 
+        'jquery.fancybox/jquery.fancybox-1.2.1.pack.js', :cache => 'jquery-and-plugins' %>
+
+  <%= stylesheet_link_tag 'compiled/screen' %>
+ 
+  <%= meta_data_tags %>
+  
+  <!-- For microformats -->
+  <%= stylesheet_link_tag 'dpSyntaxHighlighter' %>
+  <%= javascript_include_tag 'dpSyntaxHighlighter' %>
+  <%= javascript_include_tag 'microformats' %>
+   
+  <%= yield :head %>
+ 
+</head>
+<%
+if @body_class.nil?
+  if @content_for_sidebar
+    @body_class = 'two-col'
+  else
+    @body_class = 'one-col'
+  end
+end
+ %>
+<body class="<%= @body_class %>"<%= %( id="#{@body_id}") if @body_id %>>
+  <div id="fob">
+  	<%= link_to image_tag("jshub/jshub_fob.png"), "#jshub", :title => "Microformat markup" %>
+  </div>
+  <div id="header" class="container">                                                           
+    <ul id="nav-bar">
+      <div id="login-bar">
+        <%= render 'shared/login_bar' %>
+      </div>
+      <% if store_menu? %>
+        <%= render 'shared/store_menu' %>
+      <% end %>
+    </ul>
+    <%= link_to image_tag('jshub/demo_store_logo.png'), root_path, :title => 'jsHub.org demo store' %> 
+  </div>
+  <div id="wrapper" class="container"> 
+    <% if @content_for_sidebar %>
+    <div id="sidebar">
+      <%= yield :sidebar %>
+    </div>
+    <% end %>
+    
+    <div id="content">
+      <%= breadcrumbs(@taxon) if @taxon %>
+      <% if flash[:notice] %>
+      <div class="flash notice"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:error] %>
+      <div class="flash errors"><%= flash[:error] %></div>
+      <% end %>
+      <%= yield %>
+	  
+	  <div class="hpage" style="display: none">
+	  	Page name: <span class="name"><%= hpage[:name] %></span>
+	  </div>
+    </div>
+    <%= render :partial => 'shared/footer'%>    		
+  </div>
+  <%= render :partial => 'shared/microformats'%>    		
+</body>
+</html>

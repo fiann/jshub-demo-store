@@ -1,0 +1,75 @@
+body 
+  :border-top 8px solid black 
+  :margin-top 0px
+  :margin-bottom 0px
+  :padding-top 10px
+  :font-family Georgia
+
+em
+  :background-color #ff8
+  :font-style normal
+  :padding
+    :left 2px
+    :right 2px
+
+#header a:hover
+  :color black
+
+#fob
+  :position absolute
+  :top 0px
+  :left 50%
+  :width 100px
+  :margin-left -50px
+  :z-index 10
+
+#jshub
+  :background #e2e4e9 url(../../images/footer_bg.png) top left repeat-x 
+  :border-top 4px solid black 
+  #microformats
+    :background transparent url(../../images/footer_jshub.png) top left no-repeat
+    :padding 100px 115px 0px
+    :color = !jshub_grey
+    :font-size 14px
+    h1
+      :font-size 28px
+      :font-style italic
+      :font-weight bold
+      :margin-bottom 15px
+    h2
+      :font-size 18px
+      :font-weight bold
+      :margin-bottom 0
+    li a
+      :color #333
+    .highlight
+      :background-color #ff8
+    .dp-highlighter
+      :margin-bottom 1em
+      :line-height 60% !important
+
+div#fancy_div
+  :background-color white
+  :color = !jshub_grey
+  :font-size 14px
+  h1
+    :font-size 28px
+    :font-style italic
+    :font-weight bold
+    :margin-bottom 15px
+  h2
+    :font-size 18px
+    :font-weight bold
+    :margin-bottom 0
+
+div#popover, a#trigger_popover
+  :display none
+  
+div#popover_content
+  !padding = 10px
+  :padding = !padding
+  :height auto
+  :overflow auto
+  h2, p, span
+    :font-family Helvetica, Arial, sans-serif
+  

@@ -1,0 +1,48 @@
+<% content_for :sidebar do %>
+	<%= render :partial => "shared/taxonomies" %>
+<% end %>
+
+<div id="popover">
+<div id="popover_content">
+  <h1>Welcome to the jsHub demo store</h1>
+  <p>
+  	The store shows our recommend best practice for installing jsHub on your pages. Each
+	page contains a working jsHub tag, and the Tag Inspector user interface to see what data
+	is being captured.
+  </p>
+  <h2>Microformat markup</h2>
+  <p>
+    What is a microformat? <em>Microformats place metadata in HTML</em>, rather than JavaScript
+	variables. Scroll down to the bottom of each page to see the microformat markup.
+  </p>
+  
+  <h2>The jsHub tag and the inspector</h2>
+  <p>
+  	The jsHub project provides a simple, standard, unified tag, with plugins that know how 
+    to send data to the various services we are using on the page. <em>The Tag Inspector shows
+	all the data captured by the tag.</em> Click the black jsHub icon at the bottom right of
+	the screen to open the Tag Inspector.
+  </p>
+  
+  <h2>Find out more</h2>
+  <span>
+    You can find links to documentation and developer resources in the markup section at the 
+	bottom of the page.
+  </span>
+</div>
+</div>
+
+<a id="trigger_popover" href="#popover">clicky</a>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('a#trigger_popover').fancybox({
+		'frameWidth': 700,
+		'frameHeight': 400,
+		'hideOnContentClick': true
+	}).click();
+  });
+</script>
+
+<%= render :partial => "shared/products.html.erb", :locals => {:products => @products, :taxon => @taxon } %>
+
+<%= page_links(:prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;") if @search.page_count > 1 %>

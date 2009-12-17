@@ -1,0 +1,40 @@
+
+<script type="text/javascript">
+  // Declare 3rd party Analytics modules
+  YUI.add('google-analytics', function(Y) {
+    // Google Analytics basic
+    var pageTracker = _gat._getTracker("UA-8152756-4");
+    Y.log("pageTracker:"+ pageTracker, 'info', 'Google Analytics');
+    pageTracker._trackPageview(<%= @ga_pagename || '' %>);
+  }, '0.1' , {
+    requires:['google-analytics-lib'], 
+    after:['google-analytics-lib']
+  });
+
+  YUI.add('webtrends', function(Y) {
+    // Webtrends basic
+    var _tag=new WebTrends();
+    _tag.dcsCollect();
+  }, '0.1', {
+    requires:['webtrends-lib'], 
+    after:['webtrends-lib']
+  });    
+
+  YUI({
+    base: 'http://yui.yahooapis.com/combo?3.0.0/build/', 
+    modules:  { 
+      "google-analytics-lib": {
+        fullpath: (("https:" == document.location.protocol) ? "https://ssl." : "http://www.") +"google-analytics.com/ga.js"
+      },
+      "webtrends-lib": {
+        fullpath: "/retail/javascripts/webtrends/webtrends_basic/webtrends.js"
+      }
+    }
+  }).use('google-analytics', 'webtrends', function(Y, result) {
+    if (!result.success) {
+        Y.log('Load failure: ' + result.msg, 'warn', 'jsHub');
+    } else {
+        Y.log('Loaded: 3rd party analytics', 'info', 'jsHub');
+    }
+  });
+</script>    

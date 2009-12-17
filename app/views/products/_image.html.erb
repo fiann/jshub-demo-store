@@ -1,0 +1,5 @@
+<% if image %> 
+  <%= image_tag image.attachment.url(:product), :class => 'photo' %>
+<% else %>
+  <%= product_image(@product) %>
+<% end %>
