@@ -13,7 +13,6 @@ public/dispatch.rb
 httpd
 pgsql
 config/*-public.asc
-config/database.yml
 config/mongrel_cluster.yml
 db/*.sql
 db/*.sqlite3
