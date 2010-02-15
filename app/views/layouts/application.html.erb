@@ -4,18 +4,17 @@
   <title>jsHub.org Demo Store</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
  
-   <!-- Combo generated jsHub modules -->
-  <%= javascript_include_tag 'jshub/yui/jshub.js' %>
+  <!-- Visual effects based on jQuery -->
+  <%= stylesheet_link_tag '../javascripts/jquery.fancybox/jquery.fancybox.css' %>
+  <%= javascript_include_tag 'jquery-1.3.2.min.js', 'jquery.validate.pack.js', 
+        'jquery/jquery.color.js', 'jquery.fancybox/jquery.easing.1.3.js', 
+        'jquery.fancybox/jquery.fancybox-1.2.1.pack.js', :cache => 'jquery-and-plugins' %>
+
+  <!-- Combo generated jsHub modules -->
+  <%= javascript_include_tag 'jshub/jshub.js' %>
   
   <!-- jsHub Tag Inspector -->
   <%= render :partial => 'shared/jshubinspector'%>    		
-
-
-  <!-- jsHub provide a copy of jQuery to be extended -->
-  <%= stylesheet_link_tag '../javascripts/jquery.fancybox/jquery.fancybox.css' %>
-  <%= javascript_include_tag 'jquery.validate.pack.js', 
-        'jquery/jquery.color.js', 'jquery.fancybox/jquery.easing.1.3.js', 
-        'jquery.fancybox/jquery.fancybox-1.2.1.pack.js', :cache => 'jquery-and-plugins' %>
 
   <%= stylesheet_link_tag 'compiled/screen' %>
  
