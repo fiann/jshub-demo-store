@@ -12,16 +12,21 @@ production:
   adapter: sqlite3
   database: db/production.sqlite3
                                     
-# special mode for demo.spreecommerce.com (you probably don't need this)                                    
-demo:
-  adapter: sqlite3
-  database: db/production.sqlite3
-
 passenger:
   development
   
+# paths specific for the Gromit server
 gromit:
-  development  
-  
+  adapter: sqlite3
+  # Keep data between capistrano deployments by putting the database in shared/db
+  # The db:migrate version is kept in the database itself
+  database: /var/capistrano/retail/shared/db/production.sqlite3
+  timeout: 5000
+
+# paths specific for the jsHub server
 jshub:
-  development  
+  adapter: sqlite3
+  # Keep data between capistrano deployments by putting the database in shared/db
+  # The db:migrate version is kept in the database itself
+  database: /var/capistrano/retail/shared/db/production.sqlite3
+  timeout: 5000 

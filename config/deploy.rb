@@ -13,7 +13,11 @@ set :deploy_to,   "/var/capistrano/#{application}"
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
-set :scm,         "subversion"
+set :scm,         "git"
+set :scm_verbose, true
+set :deploy_via,  :checkout
+set :branch,      "master"
+set :git_shallow_clone, 1
 
 #By default, Capistrano will try to use sudo to do certain operations (setting 
 #up your servers, restarting your application, etc.). If you are on a shared 
