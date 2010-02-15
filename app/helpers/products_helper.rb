@@ -6,7 +6,7 @@ module ProductsHelper
     
     amount = product_or_variant.is_a?(Product) ? product_or_variant.master_price : product_or_variant.price
 
-    options[:format_as_currency] ? format_price(amount, options) : amount
+    options[:format_as_currency] ? format_price(amount) : amount
   end
   
   # returns the formatted change in price (from the master price) for the specified variant (or simply return 
