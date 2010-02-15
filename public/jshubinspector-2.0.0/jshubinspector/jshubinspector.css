@@ -1,0 +1,419 @@
+
+
+
+
+
+
+
+div#jshub_inspector_container {
+  text-align: left; }
+  div#jshub_inspector_container.position-br {
+    position: fixed;
+    right: 105px;
+    bottom: 40px;
+    z-index: 1000;
+    width: auto;
+    height: auto; }
+  div#jshub_inspector_container.position-tr {
+    position: fixed;
+    right: 295px;
+    top: 30px;
+    z-index: 1000;
+    width: auto;
+    height: auto; }
+
+div.jshub.inspector .title {
+  color: #858689;
+  font-weight: bold;
+  font-size: 110% !important; }
+div.jshub.inspector .state1, div.jshub.inspector .state2, div.jshub.inspector .state3 {
+  font-size: 85%;
+  border-top-color: #171717;
+  border-bottom-color: #000000;
+  background-color: #000000; }
+  div.jshub.inspector .state1 a.container-close,   div.jshub.inspector .state2 a.container-close,   div.jshub.inspector .state3 a.container-close {
+    display: block;
+    height: inherit;
+    overflow: hidden;
+    text-indent: -10000em;
+    text-decoration: none;
+    width: 16px;
+    height: 17px !important;
+    background-image: url('assets/images/inspector_icons_small.png');
+    background-position: -50px -450px;
+    background-repeat: no-repeat; }
+  div.jshub.inspector .state1 a.container-minimise,   div.jshub.inspector .state2 a.container-minimise,   div.jshub.inspector .state3 a.container-minimise {
+    position: absolute;
+    width: 16px;
+    height: 17px !important;
+    top: 5px;
+    right: 26px;
+    display: block;
+    height: inherit;
+    overflow: hidden;
+    text-indent: -10000em;
+    text-decoration: none;
+    background-color: transparent;
+    background-image: url('assets/images/icon-indicator-sprite.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: -17px -268px; }
+  div.jshub.inspector .state1 a.container-info,   div.jshub.inspector .state2 a.container-info,   div.jshub.inspector .state3 a.container-info {
+    position: absolute;
+    width: 16px;
+    height: 16px !important;
+    bottom: 2px;
+    left: 2px;
+    display: block;
+    height: inherit;
+    overflow: hidden;
+    text-indent: -10000em;
+    text-decoration: none;
+    background-color: transparent;
+    background-image: url('assets/images/icon-indicator-sprite.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: -17px -367px; }
+  div.jshub.inspector .state1 .hd, div.jshub.inspector .state1 .ft, div.jshub.inspector .state1 .bd,   div.jshub.inspector .state2 .hd, div.jshub.inspector .state2 .ft, div.jshub.inspector .state2 .bd,   div.jshub.inspector .state3 .hd, div.jshub.inspector .state3 .ft, div.jshub.inspector .state3 .bd {
+    background-color: #000000; }
+  div.jshub.inspector .state1 .hd,   div.jshub.inspector .state2 .hd,   div.jshub.inspector .state3 .hd {
+    height: 24px;
+    line-height: 24px;
+    border-color: #000000;
+    background: none;
+    background-color: #cccccc;
+    background-image: url('assets/images/inspector_highlights.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left -50px; }
+  div.jshub.inspector .state1 .ft,   div.jshub.inspector .state2 .ft,   div.jshub.inspector .state3 .ft {
+    position: relative; }
+    div.jshub.inspector .state1 .ft div.version,     div.jshub.inspector .state2 .ft div.version,     div.jshub.inspector .state3 .ft div.version {
+      width: 60%;
+      height: 100%;
+      padding-left: 50px;
+      color: #fff;
+      font-size: 120%; }
+    div.jshub.inspector .state1 .ft div.logo,     div.jshub.inspector .state2 .ft div.logo,     div.jshub.inspector .state3 .ft div.logo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background-image: url('assets/images/inspector_icons_small.png');
+      background-position: -50px -50px; }
+  div.jshub.inspector .state1 .bd,   div.jshub.inspector .state2 .bd,   div.jshub.inspector .state3 .bd {
+    padding: 0;
+    background-color: transparent; }
+    div.jshub.inspector .state1 .bd .yui-module .bd,     div.jshub.inspector .state2 .bd .yui-module .bd,     div.jshub.inspector .state3 .bd .yui-module .bd {
+      border-left: 0;
+      border-right: 0; }
+    div.jshub.inspector .state1 .bd div.search,     div.jshub.inspector .state2 .bd div.search,     div.jshub.inspector .state3 .bd div.search {
+      padding: 5px 7px; }
+      div.jshub.inspector .state1 .bd div.search div.yui-u,       div.jshub.inspector .state2 .bd div.search div.yui-u,       div.jshub.inspector .state3 .bd div.search div.yui-u {
+        width: 87.5%; }
+      div.jshub.inspector .state1 .bd div.search div.yui-u.first,       div.jshub.inspector .state2 .bd div.search div.yui-u.first,       div.jshub.inspector .state3 .bd div.search div.yui-u.first {
+        width: 11.5%;
+        min-width: 29px; }
+      div.jshub.inspector .state1 .bd div.search label.search,       div.jshub.inspector .state2 .bd div.search label.search,       div.jshub.inspector .state3 .bd div.search label.search {
+        display: block;
+        padding: 5px 2px;
+        color: #858689;
+        font-size: 100%;
+        font-weight: bold; }
+      div.jshub.inspector .state1 .bd div.search input.search,       div.jshub.inspector .state2 .bd div.search input.search,       div.jshub.inspector .state3 .bd div.search input.search {
+        width: 97%;
+        border: 2px solid #000000;
+        border-radius: 0.6em;
+        -moz-border-radius: 0.6em;
+        padding: 3px 2px;
+        margin-right: 2%;
+        background-image: url('assets/images/inspector_icons_small.png');
+        background-repeat: no-repeat;
+        background-position: -45px -397px; }
+    div.jshub.inspector .state1 .bd div.jshub-buttons,     div.jshub.inspector .state2 .bd div.jshub-buttons,     div.jshub.inspector .state3 .bd div.jshub-buttons {
+      padding: 10px 10px; }
+      div.jshub.inspector .state1 .bd div.jshub-buttons a.jshub-button,       div.jshub.inspector .state2 .bd div.jshub-buttons a.jshub-button,       div.jshub.inspector .state3 .bd div.jshub-buttons a.jshub-button {
+        margin: 0;
+        padding: 3px 10px;
+        border: 2px solid #000000;
+        border-radius: 0.6em;
+        -moz-border-radius: 0.6em;
+        background-color: #035b9d;
+        background-image: url('assets/images/inspector_highlights.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: left -50px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 12px;
+        color: #ffffff; }
+  div.jshub.inspector .state1 .status,   div.jshub.inspector .state2 .status,   div.jshub.inspector .state3 .status {
+    border-bottom: 1px solid #000000; }
+  div.jshub.inspector .state1 div#event_list ul,   div.jshub.inspector .state2 div#event_list ul,   div.jshub.inspector .state3 div#event_list ul {
+    width: inherit !important;
+    border: none;
+    margin: 2px;
+    margin-bottom: 5px;
+    background-color: transparent; }
+    div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel,     div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel,     div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel {
+      background-color: #ffffff; }
+      div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel p.default-content,       div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel p.default-content,       div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel p.default-content {
+        margin: 0;
+        padding: 5px 5px 0; }
+      div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel.empty p.default-content,       div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel.empty p.default-content,       div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel.empty p.default-content {
+        display: block; }
+      div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel.full p.default-content,       div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel.full p.default-content,       div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel.full p.default-content {
+        display: none; }
+      div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle,       div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle,       div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle {
+        padding: 0.2em 0.3em 0.15em 0.3em;
+        border-width: 1px;
+        border-style: solid;
+        border-top-color: #c4c4c6;
+        border-right-color: #545556;
+        border-bottom-color: #383839;
+        border-left-color: #9fa0a2;
+        background: none;
+        background-image: url('assets/images/inspector_highlights.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: left -150px;
+        color: #fff;
+        text-decoration: none; }
+        div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle.active,         div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle.active,         div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle.active {
+          background-position: left -250px;
+          border-top-color: #85afd0;
+          border-right-color: #1c4a6d;
+          border-bottom-color: #012642;
+          border-left-color: #387eb2; }
+        div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle span.indicator,         div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle span.indicator,         div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle span.indicator {
+          display: none; }
+        div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle span.count,         div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle span.count,         div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle span.count {
+          position: absolute;
+          right: 1.5em; }
+      div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle:hover,       div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle:hover,       div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle:hover {
+        background-image: url('assets/images/inspector_highlights.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: left -200px;
+        background-border-top-color: #9b9b9b;
+        background-border-right-color: #1f1f1f;
+        background-border-bottom-color: #151515;
+        background-border-left-color: #5d5d5d; }
+        div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle:hover.active,         div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle:hover.active,         div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel a.yui-accordion-toggle:hover.active {
+          background-position: left -250px;
+          background-border-top-color: #85afd0;
+          background-border-right-color: #1c4a6d;
+          background-border-bottom-color: #012642;
+          background-border-left-color: #387eb2; }
+      div.jshub.inspector .state1 div#event_list ul li.yui-accordion-panel div.yui-accordion-content,       div.jshub.inspector .state2 div#event_list ul li.yui-accordion-panel div.yui-accordion-content,       div.jshub.inspector .state3 div#event_list ul li.yui-accordion-panel div.yui-accordion-content {
+        overflow: auto;
+        min-height: 100px;
+        max-height: 350px;
+        background-color: #ffffff; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .bd,     div.jshub.inspector .state2 div#event_list ul .event-section .bd,     div.jshub.inspector .state3 div#event_list ul .event-section .bd {
+      margin: 0;
+      padding: 0;
+      border: none; }
+    div.jshub.inspector .state1 div#event_list ul .event-section hr.event-separator,     div.jshub.inspector .state2 div#event_list ul .event-section hr.event-separator,     div.jshub.inspector .state3 div#event_list ul .event-section hr.event-separator {
+      margin: 0;
+      margin: 5px;
+      margin-bottom: 0;
+      border: none;
+      border-top: 1px solid #999999; }
+    div.jshub.inspector .state1 div#event_list ul .event-section div.event-item, div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item, div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item,     div.jshub.inspector .state2 div#event_list ul .event-section div.event-item, div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item, div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item,     div.jshub.inspector .state3 div#event_list ul .event-section div.event-item, div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item, div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item {
+      color: +text_color_normal; }
+      div.jshub.inspector .state1 div#event_list ul .event-section div.event-item .bd,       div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item .bd,       div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item .bd,       div.jshub.inspector .state2 div#event_list ul .event-section div.event-item .bd,       div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item .bd,       div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item .bd,       div.jshub.inspector .state3 div#event_list ul .event-section div.event-item .bd,       div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item .bd,       div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item .bd {
+        margin: 0;
+        padding: 5px;
+        padding-bottom: 0;
+        border: none;
+        background-color: transparent; }
+        div.jshub.inspector .state1 div#event_list ul .event-section div.event-item .bd hr.event-separator,         div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item .bd hr.event-separator,         div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item .bd hr.event-separator,         div.jshub.inspector .state2 div#event_list ul .event-section div.event-item .bd hr.event-separator,         div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item .bd hr.event-separator,         div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item .bd hr.event-separator,         div.jshub.inspector .state3 div#event_list ul .event-section div.event-item .bd hr.event-separator,         div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item .bd hr.event-separator,         div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item .bd hr.event-separator {
+          margin: 0;
+          margin-top: 5px; }
+        div.jshub.inspector .state1 div#event_list ul .event-section div.event-item .bd p,         div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item .bd p,         div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item .bd p,         div.jshub.inspector .state2 div#event_list ul .event-section div.event-item .bd p,         div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item .bd p,         div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item .bd p,         div.jshub.inspector .state3 div#event_list ul .event-section div.event-item .bd p,         div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item .bd p,         div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item .bd p {
+          margin: 0; }
+      div.jshub.inspector .state1 div#event_list ul .event-section div.event-item ul.message.success li, div.jshub.inspector .state1 div#event_list ul .event-section div.event-item div.message.success ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item ul.message.success li, div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item div.message.success ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item ul.message.success li, div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item div.message.success ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.event-item ul.message.success li, div.jshub.inspector .state2 div#event_list ul .event-section div.event-item div.message.success ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item ul.message.success li, div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item div.message.success ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item ul.message.success li, div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item div.message.success ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.event-item ul.message.success li, div.jshub.inspector .state3 div#event_list ul .event-section div.event-item div.message.success ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item ul.message.success li, div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item div.message.success ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item ul.message.success li, div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item div.message.success ul li {
+        background-color: transparent;
+        background-image: url('assets/images/icon-indicator-sprite.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: -21px -68px; }
+      div.jshub.inspector .state1 div#event_list ul .event-section div.event-item ul.message.error li, div.jshub.inspector .state1 div#event_list ul .event-section div.event-item div.message.error ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item ul.message.error li, div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item div.message.error ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item ul.message.error li, div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item div.message.error ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.event-item ul.message.error li, div.jshub.inspector .state2 div#event_list ul .event-section div.event-item div.message.error ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item ul.message.error li, div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item div.message.error ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item ul.message.error li, div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item div.message.error ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.event-item ul.message.error li, div.jshub.inspector .state3 div#event_list ul .event-section div.event-item div.message.error ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item ul.message.error li, div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item div.message.error ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item ul.message.error li, div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item div.message.error ul li {
+        background-color: transparent;
+        background-image: url('assets/images/icon-indicator-sprite.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: -21px -116px; }
+      div.jshub.inspector .state1 div#event_list ul .event-section div.event-item ul.message.info li, div.jshub.inspector .state1 div#event_list ul .event-section div.event-item div.message.info ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item ul.message.info li, div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item div.message.info ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item ul.message.info li, div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item div.message.info ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.event-item ul.message.info li, div.jshub.inspector .state2 div#event_list ul .event-section div.event-item div.message.info ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item ul.message.info li, div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item div.message.info ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item ul.message.info li, div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item div.message.info ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.event-item ul.message.info li, div.jshub.inspector .state3 div#event_list ul .event-section div.event-item div.message.info ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item ul.message.info li, div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item div.message.info ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item ul.message.info li, div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item div.message.info ul li {
+        background-color: transparent;
+        background-image: url('assets/images/icon-indicator-sprite.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: -21px -168px; }
+      div.jshub.inspector .state1 div#event_list ul .event-section div.event-item ul.message.warning li, div.jshub.inspector .state1 div#event_list ul .event-section div.event-item div.message.warning ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item ul.message.warning li, div.jshub.inspector .state1 div#event_list ul .event-section div.datasource-item div.message.warning ul li,       div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item ul.message.warning li, div.jshub.inspector .state1 div#event_list ul .event-section div.tag-status-item div.message.warning ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.event-item ul.message.warning li, div.jshub.inspector .state2 div#event_list ul .event-section div.event-item div.message.warning ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item ul.message.warning li, div.jshub.inspector .state2 div#event_list ul .event-section div.datasource-item div.message.warning ul li,       div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item ul.message.warning li, div.jshub.inspector .state2 div#event_list ul .event-section div.tag-status-item div.message.warning ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.event-item ul.message.warning li, div.jshub.inspector .state3 div#event_list ul .event-section div.event-item div.message.warning ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item ul.message.warning li, div.jshub.inspector .state3 div#event_list ul .event-section div.datasource-item div.message.warning ul li,       div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item ul.message.warning li, div.jshub.inspector .state3 div#event_list ul .event-section div.tag-status-item div.message.warning ul li {
+        color: #ff6600;
+        background-image: url('assets/images/inspector_icons_small.png');
+        background-position: -50px -147px; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .event-item ul.message,     div.jshub.inspector .state1 div#event_list ul .event-section .datasource-item ul.message,     div.jshub.inspector .state2 div#event_list ul .event-section .event-item ul.message,     div.jshub.inspector .state2 div#event_list ul .event-section .datasource-item ul.message,     div.jshub.inspector .state3 div#event_list ul .event-section .event-item ul.message,     div.jshub.inspector .state3 div#event_list ul .event-section .datasource-item ul.message {
+      margin: 0;
+      padding: 2px; }
+      div.jshub.inspector .state1 div#event_list ul .event-section .event-item ul.message li,       div.jshub.inspector .state1 div#event_list ul .event-section .datasource-item ul.message li,       div.jshub.inspector .state2 div#event_list ul .event-section .event-item ul.message li,       div.jshub.inspector .state2 div#event_list ul .event-section .datasource-item ul.message li,       div.jshub.inspector .state3 div#event_list ul .event-section .event-item ul.message li,       div.jshub.inspector .state3 div#event_list ul .event-section .datasource-item ul.message li {
+        padding: 0;
+        padding-left: 20px;
+        background-color: transparent;
+        background-image: url('assets/images/icon-indicator-sprite.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: top left; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .event-item p.variable,     div.jshub.inspector .state1 div#event_list ul .event-section .datasource-item p.variable,     div.jshub.inspector .state2 div#event_list ul .event-section .event-item p.variable,     div.jshub.inspector .state2 div#event_list ul .event-section .datasource-item p.variable,     div.jshub.inspector .state3 div#event_list ul .event-section .event-item p.variable,     div.jshub.inspector .state3 div#event_list ul .event-section .datasource-item p.variable {
+      font-weight: bold; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .event-item p.vendor,     div.jshub.inspector .state1 div#event_list ul .event-section .datasource-item p.vendor,     div.jshub.inspector .state2 div#event_list ul .event-section .event-item p.vendor,     div.jshub.inspector .state2 div#event_list ul .event-section .datasource-item p.vendor,     div.jshub.inspector .state3 div#event_list ul .event-section .event-item p.vendor,     div.jshub.inspector .state3 div#event_list ul .event-section .datasource-item p.vendor {
+      color: #333333; }
+      div.jshub.inspector .state1 div#event_list ul .event-section .event-item p.vendor.source,       div.jshub.inspector .state1 div#event_list ul .event-section .datasource-item p.vendor.source,       div.jshub.inspector .state2 div#event_list ul .event-section .event-item p.vendor.source,       div.jshub.inspector .state2 div#event_list ul .event-section .datasource-item p.vendor.source,       div.jshub.inspector .state3 div#event_list ul .event-section .event-item p.vendor.source,       div.jshub.inspector .state3 div#event_list ul .event-section .datasource-item p.vendor.source {
+        padding-bottom: 4px; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .event-item div.duplicate p.value,     div.jshub.inspector .state1 div#event_list ul .event-section .datasource-item div.duplicate p.value,     div.jshub.inspector .state2 div#event_list ul .event-section .event-item div.duplicate p.value,     div.jshub.inspector .state2 div#event_list ul .event-section .datasource-item div.duplicate p.value,     div.jshub.inspector .state3 div#event_list ul .event-section .event-item div.duplicate p.value,     div.jshub.inspector .state3 div#event_list ul .event-section .datasource-item div.duplicate p.value {
+      color: #333333; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .datasource-item div.event-header,     div.jshub.inspector .state2 div#event_list ul .event-section .datasource-item div.event-header,     div.jshub.inspector .state3 div#event_list ul .event-section .datasource-item div.event-header {
+      font-weight: bold; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .tag-status-item div.event-header,     div.jshub.inspector .state2 div#event_list ul .event-section .tag-status-item div.event-header,     div.jshub.inspector .state3 div#event_list ul .event-section .tag-status-item div.event-header {
+      font-weight: bold; }
+    div.jshub.inspector .state1 div#event_list ul .event-section .tag-status-item div.message ul,     div.jshub.inspector .state2 div#event_list ul .event-section .tag-status-item div.message ul,     div.jshub.inspector .state3 div#event_list ul .event-section .tag-status-item div.message ul {
+      margin: 0;
+      padding: 2px; }
+      div.jshub.inspector .state1 div#event_list ul .event-section .tag-status-item div.message ul li,       div.jshub.inspector .state2 div#event_list ul .event-section .tag-status-item div.message ul li,       div.jshub.inspector .state3 div#event_list ul .event-section .tag-status-item div.message ul li {
+        color: #333333;
+        font-family: tahoma;
+        min-height: 20px;
+        padding-left: 20px;
+        background-image: url('assets/images/inspector_icons_small.png'); }
+div.jshub.inspector .state2 .hd, div.jshub.inspector .state3 .hd {
+  background-color: #000000; }
+div.jshub.inspector .state1 {
+  cursor: pointer;
+  width: 95px !important; }
+  div.jshub.inspector .state1 .yui-resize-handle {
+    visibility: hidden; }
+  div.jshub.inspector .state1 .hd {
+    display: none; }
+  div.jshub.inspector .state1 .bd {
+    padding: 5px; }
+    div.jshub.inspector .state1 .bd .bd {
+      padding: 0; }
+    div.jshub.inspector .state1 .bd ul.launcher {
+      margin: 0;
+      padding: 0;
+      background-image: url('assets/images/inspector_icons_small.png');
+      background-position: -20px -52px;
+      background-repeat: no-repeat; }
+      div.jshub.inspector .state1 .bd ul.launcher li.status {
+        padding: 0 0 3px 25px;
+        list-style-image: none;
+        list-style-position: inside;
+        list-style-type: none;
+        background-image: url('assets/images/inspector_stateicons_slug.png');
+        background-repeat: no-repeat;
+        background-position: -50px -66px;
+        font-weight: bolder; }
+  div.jshub.inspector .state1 .success ul.launcher li.status {
+    background-position: -45px -150px; }
+  div.jshub.inspector .state1 .error ul.launcher li.status {
+    background-position: -45px -100px; }
+  div.jshub.inspector .state1 .info ul.launcher li.status {
+    background-position: -45px -200px; }
+  div.jshub.inspector .state1 .warning ul.launcher li.status {
+    background-position: -45px -50px; }
+  div.jshub.inspector .state1 .ft {
+    display: none; }
+div.jshub.inspector .state2 {
+  width: 265px !important; }
+  div.jshub.inspector .state2 .yui-resize-handle {
+    visibility: hidden; }
+  div.jshub.inspector .state2 .status.large {
+    height: 50px;
+    background-color: transparent;
+    background-image: url('assets/images/inspector_icons_large.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll; }
+    div.jshub.inspector .state2 .status.large div.text {
+      width: 74.1%; }
+    div.jshub.inspector .state2 .status.large p.self {
+      margin: 0;
+      padding: 0;
+      padding-top: 4px;
+      color: #ffffff;
+      font-size: 100%;
+      font-weight: normal;
+      line-height: 20px; }
+    div.jshub.inspector .state2 .status.large p.message {
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px; }
+  div.jshub.inspector .state2 .jshub-buttons.large {
+    text-align: center;
+    padding: 3px 0; }
+  div.jshub.inspector .state2 .success .status.large {
+    background-position: -50px -150px; }
+  div.jshub.inspector .state2 .error .status.large {
+    background-position: -50px -100px; }
+  div.jshub.inspector .state2 .info .status.large {
+    background-position: -50px -200px; }
+  div.jshub.inspector .state2 .warning .status.large {
+    background-position: -50px -50px; }
+div.jshub.inspector .state3 .yui-resize-handle {
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  background-image: url('assets/images/inspector_icons_small.png');
+  background-position: -50px -350px;
+  background-repeat: no-repeat; }
+div.jshub.inspector .state3 #event_list {
+  padding: 0 5px; }
+  div.jshub.inspector .state3 #event_list .bd {
+    margin: 0;
+    padding: 0;
+    border: none; }
+div.jshub.inspector .state3 .status.small {
+  background-image: url('assets/images/inspector_icons_small.png');
+  background-repeat: no-repeat;
+  background-color: #000;
+  padding-bottom: 5px; }
+  div.jshub.inspector .state3 .status.small div.text {
+    width: 87.1%; }
+  div.jshub.inspector .state3 .status.small p.self {
+    color: #fff;
+    font-size: 77%;
+    font-weight: normal; }
+  div.jshub.inspector .state3 .status.small p.message {
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+    padding-left: 7px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px; }
+div.jshub.inspector .state3 .jshub-buttons.small {
+  text-align: center; }
+div.jshub.inspector .state3 .success .status.small {
+  background-position: -50px -300px; }
+div.jshub.inspector .state3 .error .status.small {
+  background-position: -50px -250px; }
+div.jshub.inspector .state3 .warning .status.small {
+  background-position: -50px -200px; }
+div.jshub.inspector .state1 a.container-minimise, div.jshub.inspector .state1 a.container-info, div.jshub.inspector .state1 a.container-close, div.jshub.inspector .state1 div.status.small, div.jshub.inspector .state1 div.search, div.jshub.inspector .state1 div#mEventlistModule, div.jshub.inspector .state1 div#event_list, div.jshub.inspector .state1 div.jshub-buttons.small, div.jshub.inspector .state1 div.status.large, div.jshub.inspector .state1 div.jshub-buttons.large {
+  display: none !important; }
+div.jshub.inspector .state2 ul.launcher, div.jshub.inspector .state2 div.status.small, div.jshub.inspector .state2 div.search, div.jshub.inspector .state2 div#mEventlistModule, div.jshub.inspector .state2 div#event_list, div.jshub.inspector .state2 div.jshub-buttons.small {
+  display: none !important; }
+div.jshub.inspector .state2 .info div.jshub-buttons.large a.jshub-button.events {
+  display: none !important; }
+div.jshub.inspector .state2 .success div.jshub-buttons.large a.jshub-button.get, div.jshub.inspector .state2 .warning div.jshub-buttons.large a.jshub-button.get, div.jshub.inspector .state2 .error div.jshub-buttons.large a.jshub-button.get {
+  display: none !important; }
+div.jshub.inspector .state3 ul.launcher, div.jshub.inspector .state3 div.status.large, div.jshub.inspector .state3 div.jshub-buttons.large {
+  display: none !important; }
+div#jshub_inspector em { background-color: inherit; }
